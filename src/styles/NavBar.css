@@ -1,0 +1,104 @@
+/* Navbar Styling */
+.nav {
+    color: rgba(65, 153, 209);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    position: fixed; /* Fixed position to keep navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000; /* Keeps navbar above other content */
+}
+
+/* Navbar List and Link Styling */
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.nav li:hover {
+    text-shadow: 0 0 8px cyan, 0 0 15px cyan;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.nav li {
+    background-color: transparent;
+    padding: 5px 10px;
+}
+
+.nav li.active {
+    background-color: red;
+}
+
+.nav .left-links, .nav .right-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav .left-links {
+    position: absolute;
+    left: 5px;
+}
+
+.nav .right-links {
+    position: absolute;
+    right: 5px;
+}
+
+/* Ensure padding-top is consistent for body */
+body {
+    padding-top: 60px; /* This value matches the fixed navbar height */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+    }
+
+    /* Ensure consistent padding for small screens */
+    body {
+        padding-top: 60px; /* Ensure this value is the same on mobile screens */
+    }
+}
+.nav-links, .auth-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+}

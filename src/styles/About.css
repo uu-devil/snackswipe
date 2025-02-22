@@ -1,0 +1,133 @@
+/* General Layout */
+body {
+  padding-top: 60px !important;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.main-content {
+  padding: 40px;
+  min-height: calc(100vh - 60px);
+  text-align: center;
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 42px;
+  color: #007B9F;
+  background: linear-gradient(135deg, #007B9F, #00C6A5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  text-align: center;
+  border-bottom: 3px solid #007B9F;
+  display: inline-block;
+  padding: 10px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Reason Boxes */
+.reasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.reason {
+  width: 45%;
+  background: linear-gradient(to bottom right, #ffffff, #f0f8ff);
+  padding: 25px;
+  border: 2px solid #007B9F;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.reason-title {
+  font-size: 26px;
+  color: #007B9F;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.reason-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Owner Section */
+.owners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.owner {
+  width: 45%;
+  background: linear-gradient(to bottom right, #ffffff, #f0f8ff);
+  padding: 25px;
+  border: 2px solid #007B9F;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.owner-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #007B9F;
+}
+
+.owner-name {
+  font-size: 26px;
+  color: #007B9F;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.owner-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .reason, .owner {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
